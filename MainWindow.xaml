@@ -9,7 +9,7 @@
     <Grid>
         <TextBox HorizontalAlignment="Center" Margin="0,30,0,0" TextWrapping="Wrap" Name="tb" Text="" VerticalAlignment="Top" Width="356" Height="67" FontSize="36" FontFamily="Segoe UI Semibold"/>
         <Button Content="C" HorizontalAlignment="Left" Margin="14,115,0,0" VerticalAlignment="Top" Height="40" Width="74" Click="Clear_tb" />
-        <Button Content="[--" HorizontalAlignment="Left" Margin="107,115,0,0" VerticalAlignment="Top" Height="40" Width="74" Click="Delete_tb"/>
+        <Button Content="&lt;--" HorizontalAlignment="Left" Margin="107,115,0,0" VerticalAlignment="Top" Height="40" Width="74" Click="Delete_tb"/>
         <Button Content="X" HorizontalAlignment="Left" Margin="200,115,0,0" VerticalAlignment="Top" Height="40" Width="74" Click="CloseCalculator"/>
         <Button Content="+" HorizontalAlignment="Left" Margin="289,115,0,0" VerticalAlignment="Top" Height="40" Width="74" Click="Button_Click"/>
         <Button Content="7" HorizontalAlignment="Left" Margin="14,175,0,0" VerticalAlignment="Top" Height="40" Width="74" Click="Button_Click"/>
@@ -25,7 +25,7 @@
         <Button Content="3" HorizontalAlignment="Left" Margin="200,294,0,0" VerticalAlignment="Top" Height="40" Width="74" Click="Button_Click"/>
         <Button Content="/" HorizontalAlignment="Left" Margin="289,294,0,0" VerticalAlignment="Top" Height="40" Width="74" Click="Button_Click" />
         <Button Content="0" HorizontalAlignment="Left" Margin="14,350,0,0" VerticalAlignment="Top" Height="40" Width="74" Click="Button_Click"/>
-        <Button Content="." HorizontalAlignment="Left" Margin="107,350,0,0" VerticalAlignment="Top" Height="40" Width="74" Click="Button_Click"/>
+        <Button Content="," HorizontalAlignment="Left" Margin="107,350,0,0" VerticalAlignment="Top" Height="40" Width="74" Click="Button_Click"/>
         <Button Content="=" HorizontalAlignment="Left" Margin="200,350,0,0" VerticalAlignment="Top" Height="40" Width="163" Click="Result" />
         <Label Content="Выполнили Граф И.К. и Лезных К.Ю." HorizontalAlignment="Left" Margin="90,407,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Image HorizontalAlignment="Left" Height="58" Margin="14,390,0,0" VerticalAlignment="Top" Width="58" Source="/clown_tux_penguin_20873.png"/>
@@ -36,7 +36,21 @@
             </MenuItem>
             <MenuItem Header="About" Click="MenuItem_Click" ></MenuItem>
         </Menu>
-        <ComboBox Name="cmbFont" HorizontalAlignment="Left" Margin="84,1,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbFont_SelectionChanged"/>
+        <!--<ComboBox Name="cmbFont" HorizontalAlignment="Left" Margin="84,1,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbFont_SelectionChanged"/>-->
+        <ComboBox x:Name="Select_Fontsize"  Margin="88,0,234,424">
+            <ComboBoxItem>10</ComboBoxItem>
+            <ComboBoxItem>12</ComboBoxItem>
+            <ComboBoxItem IsSelected ="True">14</ComboBoxItem>
+            <ComboBoxItem>16</ComboBoxItem>
+            <ComboBoxItem>18</ComboBoxItem>
+            <ComboBoxItem>20</ComboBoxItem>
+            <ComboBoxItem>22</ComboBoxItem>
+            <ComboBoxItem>24</ComboBoxItem>
+            <ComboBoxItem>30</ComboBoxItem>
+            <ComboBoxItem>42</ComboBoxItem>
+            <ComboBoxItem>64</ComboBoxItem>
+
+        </ComboBox>
 
     </Grid>
 </Window>

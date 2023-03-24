@@ -20,10 +20,11 @@ namespace Project
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
-            cmbFont.ItemsSource = Fonts.SystemFontFamilies.OrderBy(f => f.Source);
+            //cmbFont.ItemsSource = Fonts.SystemFontFamilies.OrderBy(f => f.Source);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -37,6 +38,7 @@ namespace Project
             try
             {
                 result();
+
             }
             catch (Exception ex)
             {
@@ -98,7 +100,14 @@ namespace Project
 
         private void Delete_tb(object sender, RoutedEventArgs e)
         {
-            tb.Text = tb.Text.Remove(tb.Text.Length - 1);
+            //tb.Text = tb.Text.Remove(tb.Text.Length - 1);
+            int lenght = tb.Text.Length - 1;
+            string text = tb.Text;
+            tb.Clear();
+            for (int i = 0; i < lenght; i++)
+            {
+                tb.Text = tb.Text + text[i];
+            }
         }
 
         private void CloseCalculator(object sender, RoutedEventArgs e)
@@ -112,10 +121,11 @@ namespace Project
             MessageBox.Show("Разработали Граф И.К. и Лезных К.Ю. в 2023 году v0.1");
         }
 
-        private void cmbFont_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //if (cmbFont.SelectedItem != null)
-            //    tb.Selection.ApplyPropertyValue(Inline.FontFamilyProperty, cmbFont.SelectedItem);
-        }
+        //private void cmbFont_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    if (cmbFont.SelectedItem != null)
+        //        tb.Selection.ApplyPropertyValue(Inline.FontFamilyProperty, cmbFont.SelectedItem);
+        //}
+
     }
 }
